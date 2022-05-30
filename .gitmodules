@@ -1,0 +1,3 @@
+[submodule "site/themes/andromeda-light"]
+	path = site/themes/andromeda-light
+	url = https://github.com/gethugothemes/andromeda-light.git

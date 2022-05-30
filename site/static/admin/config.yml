@@ -1,82 +1,146 @@
 backend:
   name: git-gateway
 
-media_folder: "site/static/img" # Folder where user uploaded files should go
-public_folder: "img"
+media_folder: "site/assets/images/upload" # Folder where user uploaded files should go
+public_folder: "images/upload"
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Post"
-    folder: "site/content/post" # The path to the folder where the documents are stored
+  - name: "blog" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Blog" # Used in the UI, ie.: "New Post"
+    folder: "site/content/blog" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro Blurb", name: "description", widget: "text"}
+      - {label: "Date Publication", name: "date", widget: "date"}
+      - {label: "Titre", name: "title", widget: "string"}
       - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Auteur", name: author_info, widget: object, fields: [
+              {label: "Nom", name: "name", widget: string},
+              {label: "Image", name: "image", widget: "image", required: false}]}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
     label: "Pages"
     files:
-      - file: "site/content/_index.md"
-        label: "Home Page"
-        name: "home"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: "Blurb", name: blurb, widget: object, fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Intro", name: intro, widget: object, fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Products", name: products, widget: list, fields: [
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Values", name: "values", widget: "object", fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
-      - file: "site/content/contact/_index.md"
-        label: "Contact Page"
+      - file: "site/content/contact.md"
+        label: "Contact"
         name: "contact"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Logo, name: logo, widget: image}
-          - {label: Body, name: body, widget: markdown}
-          - label: Contact Entries
-            name: contact_entries
-            widget: list
-            fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Text
-                name: text
-                widget: text
-      - file: "site/content/products/_index.md"
-        label: "Products Page"
-        name: "products"
+          - {label: "Titre", name: "title", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "string"}
+          - {label: "Draft", name: "draft", widget: "boolean", default: false}
+          - {label: "Image", name: "contact_image", widget: "image", required: false}
+      - file: "site/content/terms-and-conditions.md"
+        label: "Termes et Conditions"
+        name: "terms-and-conditions"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-          - {label: Full_image, name: full_image, widget: image}
-          - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
-      - file: "site/content/values/_index.md"
-        label: "Values Page"
-        name: "values"
+          - {label: "Titre", name: "title", widget: "string"}
+          - {label: "Date Publication", name: "date", widget: "date"}
+          - {label: "Layout", name: "layout", widget: "string"}
+          - {label: "Draft", name: "draft", widget: "boolean", default: false}
+          - {label: Description, name: description, widget: "text"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "site/content/a-propos.md"
+        label: "À propos"
+        name: "a-propos"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - label: Values
-            name: values
-            widget: list
-            fields:
-              - {label: Heading, name: heading, widget: string}
-              - {label: Text, name: text, widget: text}
-              - {label: Image, name: imageUrl, widget: image}
+          - {label: "Titre", name: "title", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "string"}
+          - {label: "Draft", name: "draft", widget: "boolean", default: false}
+          - {label: "Qui sommes-nous ?", name: who_we_are, widget: object, fields: [
+              {label: "Activer", name: "enable", widget: "boolean", default: true},
+              {label: "Sous-titre", name: "subtitle", widget: "string"},
+              {label: "Titre", name: "title", widget: "string"},
+              {label: Description, name: description, widget: "text"},
+              {label: "Image", name: "image", widget: "image", required: false}]}
+          - {label: "Ce que nous faisons", name: what_we_do, widget: object, fields: [
+              {label: "Activer", name: "enable", widget: "boolean", default: true},
+              {label: "Sous-titre", name: "subtitle", widget: "string"},
+              {label: "Titre", name: "title", widget: "string"},
+              {label: Block, name: block, widget: list, fields: [
+                {label: "Titre", name: "title", widget: "string"},
+                {label: Contenu, name: content, widget: "text"}]}]}
+          - {label: "Notre mission", name: our_mission, widget: object, fields: [
+              {label: "Activer", name: "enable", widget: "boolean", default: true},
+              {label: "Sous-titre", name: "subtitle", widget: "string"},
+              {label: "Titre", name: "title", widget: "string"},
+              {label: Description, name: description, widget: "text"},
+              {label: "Image", name: "image", widget: "image", required: false}]}
+          - {label: "Vidéo à propos", name: about_video, widget: object, fields: [
+              {label: "Activer", name: "enable", widget: "boolean", default: true},
+              {label: "Sous-titre", name: "subtitle", widget: "string"},
+              {label: "Titre", name: "title", widget: "string"},
+              {label: Description, name: description, widget: "text"},
+              {label: "Url vidéo", name: "video_url", widget: "string"},
+              {label: "Image de la vidéo", name: "video_thumbnail", widget: "image", required: false}]}
+          - {label: "Carrousel de marques", name: brands_carousel, widget: object, fields: [
+              {label: "Activer", name: "enable", widget: "boolean", default: true},
+              {label: "Sous-titre", name: "subtitle", widget: "string"},
+              {label: "Titre", name: "title", widget: "string"},
+              {label: "Images de marque provenant de", name: "section", widget: "string"}]}
+          - {label: "Notre équipe", name: our_team, widget: object, fields: [
+              {label: "Activer", name: "enable", widget: "boolean", default: true},
+              {label: "Sous-titre", name: "subtitle", widget: "string"},
+              {label: "Titre", name: "title", widget: "string"},
+              {label: Description, name: description, widget: "text"},
+              {label: "Équipe", name: team, widget: list, fields: [
+                {label: "Nom", name: "name", widget: "string"},
+                {label: "Photo", name: "image", widget: "image", required: false},
+                {label: "Désignation", name: "designation", widget: "string"}]}]}
+          - {label: "Nos bureaux", name: our_office, widget: object, fields: [
+              {label: "Activer", name: "enable", widget: "boolean", default: true},
+              {label: "Sous-titre", name: "subtitle", widget: "string"},
+              {label: "Titre", name: "title", widget: "string"},
+              {label: Description, name: description, widget: "text"},
+              {label: "Emplacements des bureaux", name: office_locations, widget: list, fields: [
+                {label: "Ville", name: "city", widget: "string"},
+                {label: "Drapeau du pays", name: "country_flag", widget: "image", required: false},
+                {label: "Adresse ligne 1", name: "address_line_one", widget: "string"},
+                {label: "Adresse ligne 2", name: "address_line_two", widget: "string"}]}]}
+      - file: "site/content/_index.md"
+        label: "Accueil"
+        name: "_index"
+        fields:
+          - {label: "Bannière", name: banner, widget: object, fields: [
+              {label: "Titre", name: "title", widget: "string"},
+              {label: "bouton", name: "button", widget: "string"},
+              {label: "Lien du bouton", name: "button_link", widget: "string"},
+              {label: "Image", name: "image", widget: "image", required: false}]}
+          - {label: "Carrousel de marques", name: brands_carousel, widget: object, fields: [
+              {label: "Activer", name: "enable", widget: "boolean", default: true},
+              {label: "Images de marque", name: brand_images, widget: list, field:
+                {label: Image, name: image, widget: image}}]}
+          - {label: "Caractéristiques", name: features, widget: object, fields: [
+              {label: "Activer", name: "enable", widget: "boolean", default: true},
+              {label: "Sous-titre", name: "subtitle", widget: "string"},
+              {label: "Titre", name: "title", widget: "string"},
+              {label: Description, name: description, widget: "text"},
+              {label: "blocs de fonctionnalités", name: features_blocks, widget: list, fields: [
+                {label: "Icon", name: "icon", widget: "string"},
+                {label: "Titre", name: "title", widget: "string"},
+                {label: Contenu, name: content, widget: "text"}]}]}
+          - {label: "Vidéo Intro", name: intro_video, widget: object, fields: [
+              {label: "Activer", name: "enable", widget: "boolean", default: true},
+              {label: "Sous-titre", name: "subtitle", widget: "string"},
+              {label: "Titre", name: "title", widget: "string"},
+              {label: Description, name: description, widget: "text"},
+              {label: "Url vidéo", name: "video_url", widget: "string"},
+              {label: "Image de la vidéo", name: "video_thumbnail", widget: "image", required: false}]}
+          - {label: "Comment ça fonctionne", name: how_it_works, widget: object, fields: [
+              {label: "Activer", name: "enable", widget: "boolean", default: true},
+              {label: Block, name: block, widget: list, fields: [
+                {label: "Sous-titre", name: "subtitle", widget: "string"},
+                {label: "Titre", name: "title", widget: "string"},
+                {label: Description, name: description, widget: "text"},
+                {label: "Image", name: "image", widget: "image", required: false}]}]}
+          - {label: "Témoignages", name: testimonials, widget: object, fields: [
+              {label: "Activer", name: "enable", widget: "boolean", default: true},
+              {label: "Sous-titre", name: "subtitle", widget: "string"},
+              {label: "Titre", name: "title", widget: "string"},
+              {label: Description, name: description, widget: "text"},
+              {label: "Image Gauche", name: "image_left", widget: "image", required: false},
+              {label: "image Droite", name: "image_right", widget: "image", required: false},
+              {label: "Témoignages Citations", name: testimonials_quotes, widget: list, fields: [
+                {label: Citations, name: quote, widget: "text"},
+                {label: "Nom", name: "name", widget: "string"},
+                {label: "Désignation", name: "designation", widget: "string"},
+                {label: "Image", name: "image", widget: "image", required: false}]}]}
