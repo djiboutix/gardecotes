@@ -1,8 +1,8 @@
 ---
 banner:
-  title: Bienvenue dans AXYL GROUP
-  button: "N'attendez plus. Osez la technologie. "
-  button_link: https://gethugothemes.com/products/andromeda/
+  title: Honneur Patrie Justice
+  button: "N'attendez plus. Découvrez notre Actualité"
+  button_link: actualites/
   image: images/upload/img_1653.jpg
 brands_carousel:
   enable: true
@@ -12,52 +12,46 @@ brands_carousel:
     - images/upload/brands-04-colored.png
     - images/upload/brands-03-colored.png
     - images/upload/brands-05-colored.png
-    - images/upload/brands-06-colored.png
     - images/upload/brands-04-colored.png
     - images/upload/brands-02-colored.png
     - images/upload/brands-01-colored.png
-    - images/upload/brands-06-colored.png
     - images/upload/brands-05-colored.png
-    - images/upload/01-colored.png
 features:
   enable: true
   subtitle: Présentation
-  title: Axyl Group
-  description: "Nous développons et exploitons des applications mobiles et webs
-    <br> de dernières générations. Axyl Group c'est aussi un département com:
-    <br> conception et réalisation de tous vos supports de communication."
+  title: La Garde-Côtes Djiboutienne
+  description: "Est chargée d’appliquer la loi maritime en tant que police de la mer.<br>La République de Djibouti est située au carrefour du commerce maritime mondial.<br>Le passage obligatoire des navires de la marine marchande qui transitent chaque jour<br>pour acheminer leurs marchandises vers les trois continents (Amérique, Europe et Asie)."
   features_blocks:
     - icon: las la-lock
-      title: Impression Numérique
+      title: Représentation de la souveraineté
       content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id
         diam ornare volutpat in sagitis, aliquet. Arcu cursus
     - icon: las la-magnet
-      title: Enseignements
+      title: Respect des lois et règlements
       content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id
         diam ornare volutpat in sagitis, aliquet. Arcu cursus
     - icon: las la-tachometer-alt
-      title: Dévellopement Web &amp; Mobil
+      title: Surveillance et protection
       content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id
         diam ornare volutpat in sagitis, aliquet. Arcu cursus
     - icon: las la-link
-      title: Reportage &amp; Spot
+      title: Contrôle et surveillance
       content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id
         diam ornare volutpat in sagitis, aliquet. Arcu cursus
     - icon: las la-lock
-      title: Animation 2D &amp; 3D
+      title: Prévention et lutte
       content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id
         diam ornare volutpat in sagitis, aliquet. Arcu cursus
     - icon: las la-magnet
-      title: Stratégie De Communication
+      title: Combattre la piraterie maritime
       content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id
         diam ornare volutpat in sagitis, aliquet. Arcu cursus
 intro_video:
   enable: true
-  subtitle: Short Intro Video
-  title: Built exclusively for you
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-    egestas <br> Werat viverra id et aliquet. vulputate egestas sollicitudin.
-  video_url: https://www.youtube.com/embed/xg5bOKCD8fk
+  subtitle: Actualités Video
+  title: La garde-côte Djiboutienne
+  description: En cette période de mobilisation exceptionnelle de tous les corps constitués dans le cadre de la lutte contre le COVID-19,<br> une pensée particulière a un homme qui a fait de la garde-côte djiboutienne<br> une institution digne de son nom le colonel Wais Omar Bogoreh.
+  video_url: https://www.youtube.com/embed/gm-Olfu4aYM
   video_thumbnail: images/upload/video-popup.jpg
 how_it_works:
   enable: true

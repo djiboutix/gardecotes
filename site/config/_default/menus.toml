@@ -5,35 +5,83 @@ url = ""
 weight = 1
 
 [[main]]
-name = "À propos"
-url = "a-propos/"
+name = "Garde-Côtes"
 weight = 2
+hasChildren = true
+
+  [[main]]
+  parent = "Garde-Côtes"
+  name = "À propos"
+  url = "garde-cotes/a-propos/"
+  weight = 1
+
+  [[main]]
+  parent = "Garde-Côtes"
+  name = "Mots du Colonel"
+  url = "garde-cotes/mots-du-colonel/"
+  weight = 2
+
+  [[main]]
+  parent = "Garde-Côtes"
+  name = "Nos missions"
+  url = "garde-cotes/a-propos/"
+  weight = 3
+
+  [[main]]
+  parent = "Garde-Côtes"
+  name = "Commandements"
+  url = "garde-cotes/a-propos/"
+  weight = 4
+
+  [[main]]
+  parent = "Garde-Côtes"
+  name = "Histoire"
+  url = "garde-cotes/a-propos/"
+  weight = 5
 
 [[main]]
 weight = 3
-name = "Produits"
+name = "Nos départements"
 hasChildren = true
 
   [[main]]
-  parent = "Produits"
-  name = "Axyl Drive"
-  url = "blog/post-1/"
+  parent = "Nos départements"
+  name = "Direction des Opérations"
+  url = "actualites/post-1/"
   weight = 1
+
+  [[main]]
+  parent = "Nos départements"
+  name = "Base Naval"
+  url = "actualites/post-1/"
+  weight = 2
+
+  [[main]]
+  parent = "Nos départements"
+  name = "Le Méga-Port"
+  url = "actualites/post-1/"
+  weight = 3
+
+  [[main]]
+  parent = "Nos départements"
+  name = "Brigade Judiciaire"
+  url = "actualites/post-1/"
+  weight = 4
+
+  [[main]]
+  parent = "Nos départements"
+  name = "Centre Médical"
+  url = "actualites/post-1/"
+  weight = 5
 
 [[main]]
 weight = 4
-name = "Services"
-hasChildren = true
-
-  [[main]]
-  parent = "Services"
-  name = "Axyl School"
-  url = "blog/post-2/"
-  weight = 1
+name = "Moyen Naval"
+url = "actualites/"
 
 [[main]]
-name = "Blog"
-url = "blog/"
+name = "Actualités"
+url = "actualites/"
 weight = 5
 
 # footer menu
@@ -43,13 +91,13 @@ url = "a-propos/"
 weight = 1
 
 [[footer]]
-name = "Blog"
-url = "blog/"
+name = "Actualités"
+url = "actualites/"
 weight = 2
 
 [[footer]]
 name = "Produits"
-url = "blog/post-1/"
+url = "actualites/post-1/"
 weight = 3
 
 [[footer]]

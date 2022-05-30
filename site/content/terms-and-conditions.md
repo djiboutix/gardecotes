@@ -1,5 +1,5 @@
 ---
-title: "Terms & Conditions"
+title: "Termes et Conditions"
 date: "2021-07-16"
 layout: "terms-and-conditions"
 draft: false

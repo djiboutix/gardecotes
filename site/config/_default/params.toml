@@ -2,42 +2,42 @@
 # favicon
 favicon = "images/favicon.png"
 # logo
-logo = "images/logo.svg"
+logo = "images/logo.png"
 # use `x` with logo_width, example: "100x"
 logo_width = "100x"
 # logo text will only show when logo is missing.
 logo_text = "Axyl Group"
 # OpenGraph / Twitter Card metadata
-description = "Axyl Group - Agence de communication et développement"
-author = "Themefisher"
+description = "Garde Cotes Djiboutienne"
+author = "Hassane"
 image = "images/logo.png" # this image will be used as fallback if a page has no image of its own
 
 # footer information
-footer_info = "Agence de communication et développement"
+footer_info = "Garde Cotes Djiboutienne"
 
 # contact form action
 contact_form_action = "https://formspree.io/f/xgernlzd" # contact form works with https://formspree.io
 
 # copyright
-copyright = "Copyright [Axyl Group](http://www.axylgroup.com/)"
+copyright = "Copyright [Garde Cotes Djiboutienne](http://gardecotes-dj.org/)"
 
 # custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>" 
 custom_script= "" 
 
 # buy premium popup
-buy_premium_popup = true
+buy_premium_popup = false
 
 # Main Sections
-mainSections= ["blog"]
+mainSections= ["actualites"]
 
 # reading time for blog posts
 reading_time = true
 
 # contact information
 [contact_info]
-address = "Villa N°41 HLM Grand Yoff, Dakar-Sénégal"
-phone = ["+221 33867 42 12", "+221 78 526 67 67", "+221 76 224 74 74"]
-email = ["info@axylgroup.com", "axylcommunication@gmail.com", "@axylgroup.com"]
+address = "Garde Cotes, Djibouti BP : 2501"
+phone = ["+253 77 85 16 45"]
+email = ["contact@gardecotes-dj.org"]
 
 # imaging processing
 [imaging]
@@ -72,21 +72,26 @@ button_link = "https://gethugothemes.com/products/andromeda/"
 
 ############################# social site ########################
 [[social]]
-title = "Facebook Axyl Group"
+title = "Facebook Garde-Côtes Djiboutienne"
 icon = "lab la-facebook-f" # https://icons8.com/line-awesome
-link = "https://www.facebook.com/AXYLGROUP"
+link = "https://www.facebook.com/djibcoastguard/"
 
 [[social]]
-title = "Twitter Axyl Group"
+title = "Twitter Garde-Côtes Djiboutienne"
 icon = "lab la-twitter" # https://icons8.com/line-awesome
-link = "https://twitter.com/AxylGroup"
+link = "https://twitter.com/"
 
 [[social]]
-title = "Linkedin Axyl Group"
+title = "Flickr Garde-Côtes Djiboutienne"
+icon = "lab la-flickr" # https://icons8.com/line-awesome
+link = "https://www.flickr.com/photos/138517596@N04/"
+
+[[social]]
+title = "Linkedin Garde-Côtes Djiboutienne"
 icon = "lab la-linkedin-in" # https://icons8.com/line-awesome
-link = "https://www.linkedin.com/company/axyl-group/"
+link = "https://www.linkedin.com/"
 
 [[social]]
-title = "Instagram Axyl Group"
+title = "Instagram Garde-Côtes Djiboutienne"
 icon = "lab la-instagram" # https://icons8.com/line-awesome
-link = "https://www.instagram.com/axyl_drive"
+link = "https://www.instagram.com/"

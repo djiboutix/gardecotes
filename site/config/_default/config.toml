@@ -1,7 +1,7 @@
 ######################## default configuration ####################
 baseURL = "/"
 languageCode = "fr"
-title = "Axyl Group - Agence de communication et développement"
+title = "Garde Cotes Djiboutienne - GCD"
 theme = "andromeda-light"
 # post pagination
 paginate = "6"
@@ -57,4 +57,4 @@ rel = "manifest"
 white = "#ffffff"
 black = "#000000"
 light = "#FAFAFA"
-primary_color = "#910f06"
+primary_color = "#233e81"
